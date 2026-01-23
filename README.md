@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Professional Portfolio - Sainath Kamble
 
-## Getting Started
+A high-performance, aesthetically premium portfolio website built with the latest web technologies. This project showcases my journey from Software Engineering to Customer Success Engineering, emphasizing expertise in CDN optimization, backend architecture, and seamless client experiences.
 
-First, run the development server:
+![Vibrant UI](https://img.shields.io/badge/UI-Premium_Glossy-purple)
+![Tech Stack](https://img.shields.io/badge/Stack-Next.js_15_%7C_Tailwind_4_%7C_Framer_Motion-blue)
+![Hosting](https://img.shields.io/badge/Hosting-Vercel-black)
+
+## ✨ Key Features
+
+-   **Premium Aesthetics**: Modern "Purple and White" design system with advanced glassmorphism and glossy card effects.
+-   **Interactive Experience**: Custom typing animations for profile summaries and smooth scroll-reveal transitions.
+-   **Cross-Browser Optimized**: Specifically refined for consistent rendering across Chrome and Safari (including Dark Mode handling).
+-   **Performance Focused**: Built with Next.js 15 and Tailwind CSS 4 for industry-leading speed and Core Web Vitals.
+-   **Responsive Design**: Fully optimized for mobile, tablet, and desktop viewports.
+
+## 🛠️ Tech Stack
+
+-   **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+-   **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+-   **Animations**: [Framer Motion](https://www.framer.com/motion/)
+-   **Icons**: [Lucide React](https://lucide.dev/)
+-   **Typography**: Inter (Google Fonts)
+
+## 🚀 Getting Started
+
+First, install the dependencies:
+
+```bash
+npm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project is optimized for deployment on the **Vercel Platform**. 
 
-## Learn More
+1. Push this code to a GitHub repository.
+2. Link the repository to your [Vercel](https://vercel.com) dashboard.
+3. Enjoy your free, high-performance hosting on the Vercel Hobby plan.
 
-To learn more about Next.js, take a look at the following resources:
+## 👤 Author
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Sainath Kamble**
+- LinkedIn: [sainath-kamble](https://www.linkedin.com/in/sainath-kamble-49429518b/)
+- LeetCode: [sainathkamble263](https://leetcode.com/sainathkamble263/)
+- Email: sainathkamble263@gmail.com

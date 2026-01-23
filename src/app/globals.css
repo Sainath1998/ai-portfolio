@@ -1,26 +1,97 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: #581c87;
+  --color-primary-light: #9333ea;
+  --color-primary-dark: #3b0764;
+  --color-accent: #c084fc;
+  --color-purple-bg: #fdfaff;
+
+  --color-foreground: #1a064d;
+  --color-muted-foreground: #4c1d95;
+  --color-background: #ffffff;
+
+  --font-sans: "Inter", var(--font-geist-sans);
+}
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1e1b4b;
+  /* Solid deep indigo/purple */
+  --muted-foreground: #4c1d95;
+  color-scheme: light;
+  /* Force light scheme for cross-browser consistency */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
+/* Ensure the theme remains vibrant/light even if system is in dark mode */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #1e1b4b;
+    --muted-foreground: #4c1d95;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(88, 28, 135, 0.1);
+  box-shadow: 0 10px 40px -10px rgba(88, 28, 135, 0.1);
+}
+
+.premium-glass {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow:
+    0 25px 50px -12px rgba(88, 28, 135, 0.12),
+    inset 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* Safari specific fallback */
+  display: inline-block;
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
 }
