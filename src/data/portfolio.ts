@@ -55,10 +55,10 @@ export const portfolioData = {
     ],
     skills: [
         { category: "Backend Architecture", items: ["Node.js", "Express.js", "Golang", "Gin-Gonic", "GORM", "Sequelize"] },
-        { category: "CDN & Web Performance", items: ["Cache Tuning", "Core Web Vitals", "Latency Reduction", "Global Routing"] },
-        { category: "Infrastructure & Cache", items: ["PostgreSQL", "MySQL", "Redis (Pub/Sub)", "BigQuery", "ETL Pipelines"] },
-        { category: "Tools & Cloud Ecosystem", items: ["AWS", "GCP", "Postman", "Zapier", "Make", "GitLab CI/CD", "Linux Admin"] },
-        { category: "Security & Compliance", items: ["JWT & OAuth", "Rate Limiting", "IP Whitelisting", "RNG Validation"] }
+        { category: "CDN & Web Performance", items: ["Cache Tuning", "Core Web Vitals optimization", "Latency Reduction"] },
+        { category: "Infrastructure & Cache", items: ["PostgreSQL", "MySQL", "Redis (Pub/Sub)", "BigQuery"] },
+        { category: "Tools & Cloud Ecosystem", items: ["AWS", "GCP", "Postman", "Git", "Linux"] },
+        { category: "Security & Compliance", items: ["JWT & OAuth", "Rate Limiting", "IP Whitelisting/Blacklisting", "RNG Validation"] }
     ],
     projects: [
         {
