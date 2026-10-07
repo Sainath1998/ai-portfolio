@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Code2 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const navLinks = [
     { name: "About", href: "#about" },
@@ -11,9 +13,11 @@ const navLinks = [
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
+    { name: "AI Chat", href: "/chat" },
 ];
 
 export default function Navbar() {
+    const pathname = usePathname();
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -33,21 +37,21 @@ export default function Navbar() {
             )}
         >
             <div className="container mx-auto flex items-center justify-between">
-                <a href="#" className="flex items-center gap-2 group">
+                <Link href="/" className="flex items-center gap-2 group">
                     <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white group-hover:rotate-6 transition-transform">
                         <Code2 className="w-6 h-6" />
                     </div>
                     <span className="font-bold text-xl tracking-tight text-foreground">
                         Sainath<span className="text-primary">.</span>
                     </span>
-                </a>
+                </Link>
 
                 {/* Desktop Nav */}
                 <div className="hidden md:flex items-center gap-8">
                     {navLinks.map((link) => (
                         <a
                             key={link.name}
-                            href={link.href}
+                            href={link.href.startsWith("#") && pathname !== "/" ? `/${link.href}` : link.href}
                             className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors"
                         >
                             {link.name}
@@ -83,7 +87,7 @@ export default function Navbar() {
                             {navLinks.map((link) => (
                                 <a
                                     key={link.name}
-                                    href={link.href}
+                                    href={link.href.startsWith("#") && pathname !== "/" ? `/${link.href}` : link.href}
                                     className="text-lg font-medium text-foreground/70"
                                     onClick={() => setIsMobileMenuOpen(false)}
                                 >
